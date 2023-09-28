@@ -8,10 +8,12 @@ export default function ShoppingList() {
         <div class="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
           <h1 class="text-4xl font-bold">Shopping List</h1>
           <div>
-            {StudentInfo() /* call the StudentInfo component */}
+            {StudentInfo()} /* call the StudentInfo component */
           </div>
         </div>
       </main>
+
+      //<StudentInfo /> // call the StudentInfo component
     
     
     )

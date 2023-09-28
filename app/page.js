@@ -9,7 +9,9 @@ export default function Home() {
         <h1 class="text-4xl font-bold">CPRG 306: Web Development 2 - Assignments</h1>
         <div>
           {StudentInfo() /* call the StudentInfo component */}
-          <Link href="week2\page.js">Week 2</Link>
+        </div>
+        <div>
+          <Link href = "pop.js">link text</Link>
         </div>
       </div>
     </main>
