@@ -11,7 +11,7 @@ export default function Home() {
           {StudentInfo() /* call the StudentInfo component */}
         </div>
         <div>
-          <Link href = "pop.js">link text</Link>
+          <Link href = "/week2">link text</Link>
         </div>
       </div>
     </main>
