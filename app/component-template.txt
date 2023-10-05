@@ -1,0 +1,13 @@
+
+Component Template
+-------------------------
+<html lang="en">
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <main>
+        -input code here-
+        </main>
+    </body>
+</html>

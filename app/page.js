@@ -11,6 +11,9 @@ export default function Home() {
           {StudentInfo() /* call the StudentInfo component */}
         </div>
         <div>
+          <Link href = "/test">test</Link>
+        </div>
+        <div>
           <Link href = "/week2">week2</Link>
         </div>
         <div>

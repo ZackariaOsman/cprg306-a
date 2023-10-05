@@ -5,8 +5,20 @@ export default function Week3() {
 
 
     return(
-        <main>
+        <html lang="en">
+        <head>
+            <title>Week3</title>
+        </head>
+        <body>
+            <main>
+            <div class="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
+                <h1 class="text-4xl font-bold">Week3 Shopping List</h1>
+            </div>
+            <hr className="border-t-2 border-black my-4 w-1/2"></hr>
+            <br />
             <ItemList />
-        </main>
+            </main>
+        </body>
+    </html>
     )
 };
