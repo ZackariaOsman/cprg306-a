@@ -18,7 +18,7 @@ export default function Test() {
                         </div>
 
                         <h1 class="text-4xl font-bold">
-                            Test
+                            This is a test page.
                         </h1>
 
                         {/* This is a line */}
