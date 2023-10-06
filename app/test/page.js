@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { StudentInfo } from "../StudentInfo";
+import CarList from "./Car-List";
 
 
 export default function Test() {
@@ -33,14 +34,16 @@ export default function Test() {
 
                         <div>
                             {/*you can call the StudentInfo component like this*/}
-                            {StudentInfo()}
+                            <StudentInfo name="Zackaria Osman" section="CPRG-306-D"></StudentInfo>
                         </div>
 
                         <br/>
+                        <br/>
+                        <h1 class="text-4xl font-bold">This is my list of Cars</h1>
+                        <hr className="border-t-2 border-black my-4"></hr>
+                        <CarList></CarList>
 
                         <div>
-                            {/*you can also call the StudentInfo component like this*/}
-                            <StudentInfo />
                         </div>
 
                     </div>

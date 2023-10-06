@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { StudentInfo } from '../app/StudentInfo'  // import the StudentInfo component
+import { StudentInfo } from './StudentInfo';  // import the StudentInfo component
 import Link from 'next/link';
 
 export default function Home() {
@@ -8,9 +8,9 @@ export default function Home() {
       <div class="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
         <h1 class="text-4xl font-bold">CPRG 306: Web Development 2 - Assignments</h1>
         <div>
-          {StudentInfo() /* call the StudentInfo component */}
+          <StudentInfo name="Zackaria Osman" section = "CPRG-306-D"></StudentInfo>
         </div>
-        <div>
+        <div> 
           <Link href = "/test">test</Link>
         </div>
         <div>

@@ -12,7 +12,7 @@ export default function ShoppingList() {
             <br>
             </br>
             <div>
-              {StudentInfo()}
+  
             </div>
           </div>
         </main>
