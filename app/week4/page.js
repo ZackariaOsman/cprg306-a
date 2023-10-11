@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewItem from "./new-item";   
 
 export default function Week4() {
     return(
@@ -8,6 +9,7 @@ export default function Week4() {
             <div class="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
                 <h1 class="text-4xl font-bold">Week 4 Shopping List</h1>
                 <br></br>
+                <NewItem ></NewItem>    
             </div>
             </main>
       </html>
