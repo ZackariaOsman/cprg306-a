@@ -66,7 +66,7 @@ export default function NewItem() {
                         </select>
                     </div>
                         
-                        {/**Submit Button**/}
+                    {/**Submit Button**/}
                     <div>
                         <button className='mt-2 text-xl bg-transparent hover:bg-white text-black font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded shadow leading-tight focus:outline-none focus:shadow-outline'>Submit</button>
                     </div>
