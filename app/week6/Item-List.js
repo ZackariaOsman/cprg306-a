@@ -1,18 +1,19 @@
 'use client';
 import {useState} from 'react';
 import { ItemCard } from "./Item.js";
-const items = require("./items.json");
 
 
 
-export function ItemList(){
+export function ItemList({items}){
   const [sortBy, setSortBy] = useState('name');
 
+  let sortedItems = [...items];
+
   if (sortBy == 'name'){
-    items.sort((a, b) => (a.name > b.name) ? 1 : -1)
+    sortedItems.sort((a, b) => (a.name > b.name) ? 1 : -1)
   }
   else if (sortBy == 'category'){
-    items.sort((a, b) => (a.category > b.category) ? 1 : -1)
+    sortedItems.sort((a, b) => (a.category > b.category) ? 1 : -1)
   }
   
 
@@ -28,7 +29,7 @@ export function ItemList(){
         </div>
       </div>
       <div className="flex-col justify-between">
-        {items.map((item) => (
+        {sortedItems.map((item) => (
           <ItemCard key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
         ))}
       </div>
