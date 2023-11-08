@@ -4,7 +4,7 @@ import { ItemCard } from "./Item.js";
 
 
 
-export function ItemList({items}){
+export function ItemList({items, onItemSelect}){
   const [sortBy, setSortBy] = useState('name');
 
   let sortedItems = [...items];
@@ -20,17 +20,18 @@ export function ItemList({items}){
   return(
     <div>
       <div className="flex justify-between">
-        <div className="flex">
-          <h2 className=" ml-4 text-3xl font-bold">Sort By: </h2>
-          <div className=" justify-between">
-          <button class=" mb-8 ml-8 mr-5 text-xl bg-transparent hover:bg-white text-black font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded shadow leading-tight focus:outline-none focus:shadow-outline" onClick={() => setSortBy('name')}>Name</button>
-          <button class=" text-xl bg-transparent hover:bg-white text-black font-semibold hover:text-black py-2 px-4 border border-white hover:border-transparent rounded shadow leading-tight focus:outline-none focus:shadow-outline" onClick={() => setSortBy('category')}>Category</button>
-          </div>
-        </div>
+        <button onClick={() => setSortBy('name')}>Sort by name</button>
+        <button onClick={() => setSortBy('category')}>Sort by category</button>
       </div>
-      <div className="flex-col justify-between">
+      <div>
         {sortedItems.map((item) => (
-          <ItemCard key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
+          <ItemCard 
+            key={item.id} 
+            name={item.name} 
+            quantity={item.quantity} 
+            category={item.category} 
+            onSelect={() => onItemSelect(item)}
+          />
         ))}
       </div>
     </div>
