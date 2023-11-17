@@ -7,11 +7,20 @@ import NewItem from "./new-item";
 import itemsData from './items.json';
 import MealIdeas from './meal-ideas';
 
+import { useUserAuth } from "./_utils/auth-context";
 
 export default function Week6() {
+    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
     const [items, setItems] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState('');
   
+    function handleSignIn() {
+        gitHubSignIn();
+    }
+    function handleSignOut() {
+        firebaseSignOut();
+    }
+
     const handleAddItem = (newItem) => {
       setItems(prevItems => [...prevItems, newItem]);
     };
@@ -21,24 +30,26 @@ export default function Week6() {
         setSelectedItemName(cleanedName);
       };
 
-    return(
-        <html lang="en">
-        <head>
-            <title>Week7</title>
-        </head>
-        <body>
-            <main>
-                <div className="flex justify-between">
-                <div>
-                    <h1 className="text-4xl font-bold">Week7 Shopping List</h1>
-                    <hr className="border-t-2 border-black my-4 w-1/2" />
-                    <NewItem onAddItem={handleAddItem} />
-                    <ItemList items={items} onItemSelect={handleItemSelect} />
-                </div>
-                <MealIdeas ingredient={selectedItemName} />
-                </div>
-            </main>
-        </body>
-        </html>
-    );
+      return(
+    <html lang="en">
+    <head>
+        <title>Week7</title>
+    </head>
+    <body>
+        <main>
+            <div className="flex justify-between">
+            <div>
+                <h1 className="text-4xl font-bold">Week7 Shopping List</h1>
+                <hr className="border-t-2 border-black my-4 w-1/2" />
+                <button className='gap-10 h-10 appearance-none w-25 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline' onClick={handleSignIn}>Sign In</button>
+                <button className='gap-10 h-10 appearance-none w-25 bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline' onClick={handleSignOut}>Sign Out</button>
+                <NewItem onAddItem={handleAddItem} />
+                <ItemList items={items} onItemSelect={handleItemSelect} />
+            </div>
+            <MealIdeas ingredient={selectedItemName} />
+            </div>
+        </main>
+    </body>
+</html>
+);
 };

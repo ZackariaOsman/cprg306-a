@@ -8,6 +8,7 @@ import itemsData from './items.json';
 import MealIdeas from './meal-ideas';
 
 
+
 export default function Week6() {
     const [items, setItems] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState('');
